@@ -6,7 +6,9 @@ const Layout: React.FC = () => {
 	return (
 		<div className={styles.layout}>
 			<Header />
-			<Outlet />
+			<main>
+				<Outlet />
+			</main>
 		</div>
 	);
 };
