@@ -1,0 +1,71 @@
+.articleCard {
+	display: grid;
+	grid-template-areas:
+		'image'
+		'title'
+		'author'
+		'content'
+		'date';
+	border: 1px solid #ccc;
+	border-radius: 16px;
+	background-color: #f9f9f9;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	transition: box-shadow 0.3s ease;
+
+	&:hover {
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	}
+}
+
+@media (min-width: 768px) {
+	.articleCard {
+		grid-template-areas:
+			'image title'
+			'image author'
+			'image content'
+			'image date';
+		grid-template-columns: 1fr 2fr;
+	}
+
+	.articleImage {
+		grid-area: image;
+		border-top-left-radius: 16px;
+		border-bottom-left-radius: 16px;
+	}
+}
+
+@media (max-width: 767px) {
+	.articleImage {
+		border-top-left-radius: 16px;
+		border-top-right-radius: 16px;
+	}
+}
+
+.articleImage {
+	grid-area: image;
+	color: red;
+}
+
+.articleTitle {
+	grid-area: title;
+	padding: 16px;
+}
+
+.articleContent {
+	grid-area: content;
+	padding-inline: 16px;
+}
+
+.author {
+	grid-area: author;
+	color: #666;
+	font-size: 0.8rem;
+	padding-inline: 16px;
+}
+
+.date {
+	grid-area: date;
+	color: #666;
+	font-size: 0.8rem;
+	padding: 0px 16px 16px 16px;
+}
