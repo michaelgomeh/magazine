@@ -88,3 +88,9 @@ textarea:not([rows]) {
 p {
 	font-size: 16px;
 }
+
+a,
+a:visited {
+	color: black;
+	text-decoration: none;
+}

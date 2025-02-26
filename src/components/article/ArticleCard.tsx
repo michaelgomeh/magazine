@@ -1,6 +1,7 @@
 import dayjs from 'dayjs';
 import { IArticle } from '../../types/types';
 import styles from './ArticleCard.module.css';
+import classNames from 'classnames';
 
 interface ArticleCardProps {
 	article: IArticle;
@@ -12,10 +13,12 @@ const ArticleCard = ({ article, view }: ArticleCardProps) => {
 		<div className={styles.articleCard}>
 			<div className={styles.articleBody}></div>
 			<h2 className={styles.articleTitle}>{article.title}</h2>
-			<p className={styles.articleContent}>
-				{view === 'full'
-					? article.content
-					: article.content.substring(0, 100) + '...'}
+			<p
+				className={classNames(styles.articleContent, {
+					[styles.compactArticleView]: view === 'compact',
+				})}
+			>
+				{article.content}
 			</p>
 			{article.author && (
 				<p className={styles.author}>Author: {article.author}</p>

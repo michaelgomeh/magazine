@@ -1,3 +1,4 @@
+import { Link } from 'react-router';
 import ArticleCard from '../../components/article/ArticleCard';
 import { IArticle } from '../../types/types';
 import styles from './HomePage.module.css';
@@ -37,7 +38,9 @@ const HomePage = () => {
 			cum tempora illum libero!
 			<div className={styles.articles}>
 				{articles.map((article) => (
-					<ArticleCard key={article.id} article={article} />
+					<Link to={`/article/${article.id}`} key={article.id}>
+						<ArticleCard key={article.id} article={article} view="compact" />
+					</Link>
 				))}
 			</div>
 		</div>
