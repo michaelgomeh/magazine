@@ -20,19 +20,19 @@ const ArticleCard = ({ article, view }: ArticleCardProps) => {
 			>
 				{article.content}
 			</p>
-			{article.author && (
-				<p className={styles.author}>Author: {article.author}</p>
-			)}
+			<div className={styles.cardDetails}>
+				{<p className={styles.author}>{article.author}</p>}
+				{
+					<p className={styles.date}>
+						{dayjs(article.datePublished).format('MM/DD/YY')}
+					</p>
+				}
+			</div>
 			<img
 				className={styles.articleImage}
 				src={article.imageUrl}
 				alt={article.title}
 			/>
-			{article.datePublished && (
-				<p className={styles.date}>
-					{dayjs(article.datePublished).format('MM/DD/YY')}
-				</p>
-			)}
 			{/* {article.tags && article.tags.length > 0 && (
 				<ul>
 					{article.tags.map((tag, index) => (
