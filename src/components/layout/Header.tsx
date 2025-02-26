@@ -3,7 +3,7 @@ import styles from './Layout.module.css';
 const Header = () => {
 	return (
 		<header>
-			<div className={styles['header-top']}>
+			<div className={styles.headerTop}>
 				{/* <img src={Logo} alt="Logo" /> */}
 				<h1>Wellness Magazine</h1>
 
