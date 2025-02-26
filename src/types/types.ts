@@ -7,3 +7,10 @@ export interface IArticle {
 	category: string;
 	author: string;
 }
+
+export type ArticleView = 'full' | 'compact' | 'text';
+
+export interface IArticleCardProps {
+	article: IArticle;
+	view: ArticleView;
+}

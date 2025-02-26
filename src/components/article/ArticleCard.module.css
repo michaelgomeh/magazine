@@ -9,11 +9,13 @@
 	border-radius: var(--card-radius);
 	background-color: #f9f9f9;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-	transition: box-shadow 0.3s ease;
+	transition: all 0.3s ease-in;
+	height: 100%;
+}
 
-	&:hover {
-		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	}
+.articleCard:hover {
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	background-color: white;
 }
 
 @media (min-width: 768px) {
@@ -74,7 +76,7 @@
 .compactArticleView {
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 3;
+	-webkit-line-clamp: 2;
 	overflow: hidden;
 	padding-bottom: 0;
 }

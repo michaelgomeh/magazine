@@ -1,15 +1,10 @@
 import dayjs from 'dayjs';
-import { IArticle } from '../../types/types';
 import styles from './ArticleCard.module.css';
 import classNames from 'classnames';
 import Markdown from 'react-markdown';
+import { IArticleCardProps } from '../../types/types';
 
-interface ArticleCardProps {
-	article: IArticle;
-	view: 'full' | 'compact' | 'text';
-}
-
-const ArticleCard = ({ article, view }: ArticleCardProps) => {
+const ArticleCard = ({ article, view }: IArticleCardProps) => {
 	const { title, content, imageUrl, datePublished, author } = article;
 	return (
 		<div className={styles.articleCard}>

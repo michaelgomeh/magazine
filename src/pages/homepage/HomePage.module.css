@@ -27,7 +27,9 @@
 	.homeLayout {
 		grid-template-columns: 300px 3fr 300px;
 	}
+
 	.articles {
+		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 	}
 }
