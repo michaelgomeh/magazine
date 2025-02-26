@@ -94,16 +94,3 @@ a:visited {
 	color: black;
 	text-decoration: none;
 }
-
-::-webkit-scrollbar {
-	width: 8px;
-}
-
-::-webkit-scrollbar-track {
-	background: #f0f0f0;
-}
-
-::-webkit-scrollbar-thumb {
-	background: #b6b5b5;
-	border-radius: 10px;
-}

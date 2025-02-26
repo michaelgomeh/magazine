@@ -14,13 +14,13 @@ const ArticleCard = ({ article, view }: ArticleCardProps) => {
 		<div className={styles.articleCard}>
 			<div className={styles.articleBody}></div>
 			<h2 className={styles.articleTitle}>{article.title}</h2>
-			<p
+			<div
 				className={classNames(styles.articleContent, {
 					[styles.compactArticleView]: view === 'compact',
 				})}
 			>
 				<Markdown>{article.content}</Markdown>
-			</p>
+			</div>
 			<div className={styles.cardDetails}>
 				{<p className={styles.author}>{article.author}</p>}
 				{
