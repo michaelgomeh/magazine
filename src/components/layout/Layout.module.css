@@ -7,6 +7,12 @@ header {
 	padding: 1rem 0.5rem 0.5rem 0.5rem;
 	background-color: white;
 	box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 4px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+	height: 90px;
 }
 
 .headerTop {
@@ -59,6 +65,7 @@ nav > ul {
 	width: 100%;
 	margin: 0;
 }
+
 nav > ul > li {
 	border-bottom: 2px solid white;
 	transition: border-bottom 200ms ease-in; /* Only transition border-bottom */
@@ -78,6 +85,7 @@ main {
 	justify-content: center;
 	align-items: center;
 	width: 100%;
+	margin-top: 90px;
 }
 
 @media (min-width: 768px) {

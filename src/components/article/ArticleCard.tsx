@@ -2,6 +2,7 @@ import dayjs from 'dayjs';
 import { IArticle } from '../../types/types';
 import styles from './ArticleCard.module.css';
 import classNames from 'classnames';
+import Markdown from 'react-markdown';
 
 interface ArticleCardProps {
 	article: IArticle;
@@ -18,7 +19,7 @@ const ArticleCard = ({ article, view }: ArticleCardProps) => {
 					[styles.compactArticleView]: view === 'compact',
 				})}
 			>
-				{article.content}
+				<Markdown>{article.content}</Markdown>
 			</p>
 			<div className={styles.cardDetails}>
 				{<p className={styles.author}>{article.author}</p>}

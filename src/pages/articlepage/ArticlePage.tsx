@@ -8,7 +8,7 @@ const ArticlePage = () => {
 	if (!article) {
 		return <div>Article not found</div>;
 	}
-	return <ArticleCard article={article} />;
+	return <ArticleCard article={article} view="full" />;
 };
 
 export default ArticlePage;
