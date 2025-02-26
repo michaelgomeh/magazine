@@ -1,5 +1,33 @@
+.homepage {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	padding: 16px;
+}
+
+.homeLayout {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 16px;
+}
+
 .articles {
 	display: flex;
 	flex-direction: column;
 	gap: 16px;
+}
+
+.secondaryArticles {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+@media (min-width: 768px) {
+	.homeLayout {
+		grid-template-columns: 300px 3fr 300px;
+	}
+	.articles {
+		grid-template-columns: repeat(3, 1fr);
+	}
 }

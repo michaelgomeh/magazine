@@ -6,37 +6,48 @@ import Markdown from 'react-markdown';
 
 interface ArticleCardProps {
 	article: IArticle;
-	view: 'full' | 'compact';
+	view: 'full' | 'compact' | 'text';
 }
 
 const ArticleCard = ({ article, view }: ArticleCardProps) => {
+	const { title, content, imageUrl, datePublished, author } = article;
 	return (
 		<div className={styles.articleCard}>
 			<div className={styles.articleBody}></div>
-			<h2 className={styles.articleTitle}>{article.title}</h2>
-			<div
-				className={classNames(styles.articleContent, {
-					[styles.compactArticleView]: view === 'compact',
+			<h2
+				className={classNames(styles.articleTitle, {
+					[styles.textCard]: view == 'text',
 				})}
 			>
-				<Markdown>{article.content}</Markdown>
+				{title}
+			</h2>
+			<div
+				className={classNames(styles.articleContent, {
+					[styles.compactArticleView]: view === 'compact' || view === 'text',
+				})}
+			>
+				<Markdown>{content}</Markdown>
 			</div>
 			<div className={styles.cardDetails}>
-				{<p className={styles.author}>{article.author}</p>}
+				{<p className={styles.author}>{author}</p>}
 				{
 					<p className={styles.date}>
-						{dayjs(article.datePublished).format('MM/DD/YY')}
+						{dayjs(datePublished).format('MM/DD/YY')}
 					</p>
 				}
 			</div>
-			<img
-				className={styles.articleImage}
-				src={article.imageUrl}
-				alt={article.title}
-			/>
-			{/* {article.tags && article.tags.length > 0 && (
+			{imageUrl && (
+				<img
+					className={classNames(styles.articleImage, {
+						[styles.noImage]: view === 'text',
+					})}
+					src={imageUrl}
+					alt={title}
+				/>
+			)}
+			{/* {tags && tags.length > 0 && (
 				<ul>
-					{article.tags.map((tag, index) => (
+					{tags.map((tag, index) => (
 						<li key={index}>{tag}</li>
 					))}
 				</ul>

@@ -80,3 +80,40 @@ export const articles: IArticle[] = [
 		author: 'Michael Lee',
 	},
 ];
+
+export const featuredArticles: IArticle[] = [
+	{
+		id: '1',
+		category: 'Mindfulness',
+		title:
+			'The Art of Being Present: How Mindfulness Can Improve Your Wellbeing',
+		content:
+			'Mindfulness is the practice of being fully present in the moment without judgment. It encourages awareness of your thoughts, feelings, and surroundings, which helps you manage stress and enhances your overall mental health.\n\nPracticing mindfulness can improve your focus, reduce anxiety, and foster emotional resilience. One simple way to start is through **mindful breathing**—taking a few minutes each day to focus on your breath can significantly reduce feelings of overwhelm.\n\nAnother mindfulness exercise is **body scanning**. Lie down and mentally scan your body from head to toe, noticing any tension and consciously relaxing those areas. This can help you become more attuned to physical and emotional sensations, increasing your self-awareness.\n\nIncorporating mindfulness into your daily routine doesn’t require hours of practice—just a few minutes a day can make a significant difference in your mental clarity and emotional wellbeing.',
+		imageUrl:
+			'https://img.recraft.ai/jd-wuJUSm-cQH8v6b2hoIVUh4NgdvYpZxTOLb_udCSo/rs:fit:1024:1024:0/q:95/g:no/plain/abs://prod/images/5038c16e-65a9-4044-98eb-afce46b85641@svg',
+		datePublished: new Date('2024-02-15'),
+		author: 'John Smith',
+	},
+	{
+		id: '2',
+		category: 'Nutrition',
+		title: 'Eating for Energy: How the Right Foods Can Boost Your Wellbeing',
+		content:
+			'What you eat directly affects how you feel, both physically and mentally. A well-balanced diet rich in whole foods can significantly improve your energy levels, mood, and focus.\n\nIncorporating nutrient-dense foods like leafy greens, nuts, seeds, and lean proteins into your daily meals can support optimal brain function and energy production. Avoiding processed foods and excess sugar can help reduce inflammation, which is linked to a variety of chronic health issues.\n\nConsider starting your day with a nutrient-packed breakfast like a **smoothie bowl** or **overnight oats** with chia seeds, berries, and a dollop of almond butter. These foods provide sustained energy throughout the morning, preventing the energy crashes that often occur after sugary breakfasts.\n\nBy making small, intentional changes to your eating habits, you can improve not only your physical health but also your mental clarity and overall wellbeing.',
+		imageUrl:
+			'https://img.recraft.ai/jd-wuJUSm-cQH8v6b2hoIVUh4NgdvYpZxTOLb_udCSo/rs:fit:1024:1024:0/q:95/g:no/plain/abs://prod/images/5038c16e-65a9-4044-98eb-afce46b85641@svg',
+		datePublished: new Date('2024-02-18'),
+		author: 'Emily White',
+	},
+	{
+		id: '3',
+		category: 'Exercise',
+		title: 'Move Your Body: How Regular Exercise Can Boost Mental Health',
+		content:
+			"Exercise is often thought of as a physical activity, but its mental health benefits are just as significant. Regular movement can reduce symptoms of anxiety, depression, and stress while enhancing mood and overall cognitive function.\n\nStudies show that even a 20-minute walk can boost endorphins, the body's natural mood lifters, and improve mental clarity. Incorporating activities like **yoga, swimming, or cycling** into your routine can be particularly effective at calming the mind and building resilience against life's daily stresses.\n\nIf you’re new to exercising, start small. Try committing to a 15-minute workout each day, whether it's a brisk walk, stretching routine, or quick bodyweight exercises. Over time, you’ll notice the positive impact on both your physical and mental wellbeing.\n\nExercise isn’t just about physical fitness—it’s a powerful tool for enhancing your overall emotional and mental health.",
+		imageUrl:
+			'https://img.recraft.ai/jd-wuJUSm-cQH8v6b2hoIVUh4NgdvYpZxTOLb_udCSo/rs:fit:1024:1024:0/q:95/g:no/plain/abs://prod/images/5038c16e-65a9-4044-98eb-afce46b85641@svg',
+		datePublished: new Date('2024-02-22'),
+		author: 'Olivia Green',
+	},
+];
