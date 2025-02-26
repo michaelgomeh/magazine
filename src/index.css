@@ -96,11 +96,6 @@ textarea:not([rows]) {
 	scroll-margin-block: 5ex;
 }
 
-.layout {
-	background-color: beige;
-	height: 100vh;
-}
-
 p {
 	font-size: 16px;
 }
