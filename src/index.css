@@ -91,7 +91,7 @@ textarea:not([rows]) {
 }
 
 p {
-	font-size: 16px;
+	font-size: 1rem;
 }
 
 a,

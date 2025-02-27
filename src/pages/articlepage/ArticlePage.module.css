@@ -1,0 +1,4 @@
+.articlePage {
+    overflow-y: scroll;
+    max-width: 768px;
+}
