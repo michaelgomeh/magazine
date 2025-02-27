@@ -3,8 +3,8 @@
     flex-direction: column;
     gap: 16px;
     padding: 16px;
-    margin-top: 16px;
-    margin-bottom: 16px;
+    margin-top: 32px;
+    margin-bottom: 32px;
 }
 
 .homeLayout {
@@ -27,6 +27,12 @@
     gap: 16px;
 }
 
+@media (max-width: 767px) {
+    .videoContainer {
+        flex-direction: column;
+    }
+}
+
 @media (min-width: 768px) {
     .homeLayout {
         grid-template-columns: 300px 3fr 300px;
@@ -36,19 +42,26 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
+
+    .videoContainer {
+        flex-direction: row;
+    }
 }
 
-.video {
-    width: 100%;
-    padding: 16px;
+.videoContainer {
     display: flex;
     justify-content: center;
+    gap: 1rem;
+}
+
+.videoContainer > * {
+    width: 100%;
+    flex: 1;
 }
 
 .videoDescription {
-    max-width: 600px;
-    padding: 16px;
     text-align: justify;
+    gap: 1rem;
     display: flex;
     flex-direction: column;
 

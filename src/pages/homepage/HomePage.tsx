@@ -1,18 +1,17 @@
 import {Link} from 'react-router';
 import ArticleCard from '../../components/article/ArticleCard';
 import styles from './HomePage.module.css';
-import {featuredArticles, articles} from '../../data';
+import {articles,videoArticle} from '../../data';
 import ArticleLink from '../../components/article/ArticleLink';
-import VideoPlayer from "../../components/VideoPlayer.tsx";
 
 const HomePage = () => {
-    const mainArticle = featuredArticles[0];
-    const secondaryArticles = featuredArticles;
+    const mainArticle = articles[0];
+    const secondaryArticles = articles.slice(0,3);
     return (
         <div className={styles.homepage}>
             <div className={styles.homeLayout}>
                 <div className={styles.secondaryArticles}>
-                    {articles
+                    {secondaryArticles
                         .slice(0, 3)
                         .reverse()
                         .map((article) => (
@@ -36,7 +35,14 @@ const HomePage = () => {
                     ))}
                 </div>
             </div>
-            <div className={styles.video}>
+
+            <ArticleLink
+                key={videoArticle.id}
+                article={videoArticle}
+                view="horizontal"
+            />
+
+            {/*<div className={styles.videoContainer}>
                 <VideoPlayer videoId="/naturewalk.mp4"/>
                 <div className={styles.videoDescription}>
                     <h1>The Power of a 15-Minute Nature Walk: Refresh Your Mind and Body</h1>
@@ -48,7 +54,7 @@ const HomePage = () => {
                         with nature, refreshes your mind, and leaves you feeling calmer, happier, and more energized.
                         🌿🚶‍♂️</p>
                 </div>
-            </div>
+            </div>*/}
 
             <div className={styles.articles}>
                 {articles.map((article) => (

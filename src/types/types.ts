@@ -3,12 +3,15 @@ export interface IArticle {
 	title: string;
 	content: string;
 	imageUrl?: string;
+	videoUrl?: string;
 	datePublished?: Date;
 	category: string;
 	author: string;
+	claps: number;
+	comments: number;
 }
 
-export type ArticleView = 'full' | 'compact' | 'text';
+export type ArticleView = 'full' | 'compact' | 'text' | 'horizontal';
 
 export interface IArticleCardProps {
 	article: IArticle;
