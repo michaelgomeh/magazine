@@ -35,6 +35,7 @@ const ArticleCard = ({ article, view }: IArticleCardProps) => {
 				<img
 					className={classNames(styles.articleImage, {
 						[styles.noImage]: view === 'text',
+						[styles.grayscale]: view !== 'full',
 					})}
 					src={imageUrl}
 					alt={title}

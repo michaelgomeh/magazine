@@ -7,7 +7,7 @@
 		'content';
 	border: 1px solid rgb(0, 0, 0, 0.3);
 	border-radius: var(--card-radius);
-	background-color: #f9f9f9;
+	background-color: white;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 	transition: all 0.3s ease-in;
 	height: 100%;
@@ -35,6 +35,10 @@
 		border-top-left-radius: var(--card-radius);
 		border-bottom-left-radius: var(--card-radius);
 	}
+
+	.grayscale {
+		filter: grayscale(50%);
+	}
 }
 
 @media (max-width: 767px) {
@@ -52,6 +56,11 @@
 	object-fit: cover;
 	margin-bottom: 0;
 	max-height: 300px;
+	transition: filter 0.3s ease-in-out;
+}
+
+.articleImage:hover {
+	filter: grayscale(0%);
 }
 
 .articleImage.noImage {

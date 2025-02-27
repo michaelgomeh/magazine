@@ -3,6 +3,8 @@
 	flex-direction: column;
 	gap: 16px;
 	padding: 16px;
+	margin-top: 16px;
+	margin-bottom: 16px;
 }
 
 .homeLayout {
@@ -20,6 +22,8 @@
 .secondaryArticles {
 	display: flex;
 	flex-direction: column;
+	height: 100%;
+	justify-content: space-between;
 	gap: 16px;
 }
 

@@ -1,3 +1,7 @@
+:root {
+	--primary: rgb(0, 133, 29);
+}
+
 /* Box sizing rules */
 *,
 *::before,
@@ -10,6 +14,7 @@ html {
 	-moz-text-size-adjust: none;
 	-webkit-text-size-adjust: none;
 	text-size-adjust: none;
+	-webkit-font-smoothing: antialiased;
 }
 
 /* Remove default margin in favour of better control in authored CSS */
