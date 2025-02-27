@@ -25,7 +25,6 @@ const ArticleCard = ({article, view}: IArticleCardProps) => {
         <div className={classNames(styles.articleCard, styles[view], {
             [styles.horizontal]: view == 'horizontal',
         })}>
-            <div className={styles.articleBody}></div>
             <h2
                 className={classNames(styles.articleTitle, {
                     [styles.textCard]: view == 'text',
@@ -34,9 +33,7 @@ const ArticleCard = ({article, view}: IArticleCardProps) => {
                 {title}
             </h2>
             <div
-                className={classNames(styles.articleContent, {
-                    [styles.compactArticleView]: view !== 'full',
-                })}
+                className={classNames(styles.articleContent)}
             >
                 <Markdown>{content}</Markdown>
             </div>
