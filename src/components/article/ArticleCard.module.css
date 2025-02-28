@@ -12,9 +12,6 @@
     transition: all 0.3s ease-in;
 }
 
-.articleCard:not(.full) {
-    height: 100%;
-}
 
 .articleCard:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -122,6 +119,9 @@
 
 .articleCard:not(.full) {
     max-height: calc(var(--page-height) - 60px);
+    height: 100%;
+
+
 }
 
 .articleCard.text {
