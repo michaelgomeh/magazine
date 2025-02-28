@@ -4,6 +4,7 @@ import styles from './HomePage.module.css';
 import {articles} from '../../data';
 import ArticleLink from '../../components/article/ArticleLink';
 import classNames from "classnames";
+import ZenSentence from "../../components/ZenSentence.tsx";
 
 const HomePage = () => {
     const mainArticle = articles[0];
@@ -39,25 +40,12 @@ const HomePage = () => {
                     ))}
                 </div>
             </div>
+            <ZenSentence/>
             <ArticleLink
                 key={videoArticle.id}
                 article={videoArticle}
                 view="horizontal"
             />
-            {/*<div className={styles.videoContainer}>
-                <VideoPlayer videoId="/naturewalk.mp4"/>
-                <div className={styles.videoDescription}>
-                    <h1>The Power of a 15-Minute Nature Walk: Refresh Your Mind and Body</h1>
-                    <p>Walking in nature for just 15 minutes a day can have a profound impact on your mental and
-                        physical wellbeing. Studies show that spending time outdoors reduces stress, anxiety, and
-                        fatigue, while boosting mood, creativity, and focus. The fresh air, natural light, and greenery
-                        help lower cortisol levels, improve heart health, and enhance overall relaxation. Whether it’s a
-                        stroll in the park or a short walk through a tree-lined path, this simple habit reconnects you
-                        with nature, refreshes your mind, and leaves you feeling calmer, happier, and more energized.
-                        🌿🚶‍♂️</p>
-                </div>
-            </div>*/}
-
             <div className={styles.articles}>
                 {articles.map((article) => (
                     <ArticleLink key={article.id} article={article} view="compact"/>
