@@ -1,7 +1,13 @@
 :root {
     --primary: 101, 71, 96;
-    --card-radius: 4px;
+    --card-radius: 8px;
     --page-height: calc(100vh - 120px);
+}
+
+@media (max-width: 767px) {
+    :root {
+        --page-height: calc(100vh - 90px);
+    }
 }
 
 /* Box sizing rules */
@@ -45,6 +51,8 @@ body {
     font-weight: 400;
     font-style: normal;
     text-align: justify;
+    position: relative;
+
 }
 
 /* Set shorter line heights on headings and interactive elements */

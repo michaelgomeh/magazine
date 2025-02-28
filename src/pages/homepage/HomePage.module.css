@@ -61,7 +61,7 @@
 
 @media (min-width: 768px) {
     .homeLayout {
-        grid-template-columns: 300px 3fr 300px;
+        grid-template-columns: 1fr 2fr 1fr;
     }
 
     .articles {

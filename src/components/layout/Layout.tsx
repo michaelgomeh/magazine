@@ -5,7 +5,6 @@ import Header from './Header';
 
 const Layout: React.FC = () => {
 
-    console.log('layout rendered')
     return (
         <div className={styles.layout}>
             <Header/>
