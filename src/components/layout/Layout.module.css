@@ -6,7 +6,7 @@ header {
 	align-items: center;
 	padding: 1rem 0.5rem 0.5rem 0.5rem;
 	background-color: white;
-	box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px;
+	box-shadow: rgba(0, 0, 0, 0.2) 0 2px 4px;
 	width: 100%;
 	z-index: 1000;
 	height: 90px;
@@ -70,7 +70,7 @@ nav > ul > li {
 }
 
 nav > ul > li:hover {
-	border-bottom: 2px solid var(--primary);
+	border-bottom: 2px solid rgb(var(--primary));
 }
 nav > ul > li > a {
 	text-decoration: none;

@@ -18,11 +18,35 @@
     gap: 1rem;
 }
 
+.secondaryArticles > * {
+    overflow: hidden;
+}
+
+.featured {
+    position: sticky;
+    top: -1.1rem;
+    background-color: rgba(var(--primary), 1);
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.1ch;
+    border-radius: var(--card-radius);
+    border: 1px solid rgb(0, 0, 0, 0.3);
+    padding: 1rem;
+    flex-shrink: 0;
+
+}
+
+.articleCard {
+    max-height: calc(var(--page-height) - 60px);;
+}
+
 .secondaryArticles {
     display: flex;
     flex-direction: column;
     height: 100%;
-    justify-content: space-between;
+    max-height: calc(var(--page-height) - 60px);
+    justify-content: stretch;
     gap: 1rem;
 }
 

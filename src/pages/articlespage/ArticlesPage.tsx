@@ -6,6 +6,7 @@ const ArticlesPage = () => {
     return (
         <div>
             <div className={styles.articlesList}>
+                <h2>Articles</h2>
                 {articles.map((article) => (
                     <ArticleLink key={article.id} article={article} view="horizontal"/>
                 ))}

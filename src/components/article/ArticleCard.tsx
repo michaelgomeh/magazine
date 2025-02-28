@@ -6,7 +6,7 @@ import {IArticleCardProps} from '../../types/types';
 import {useRef, useState} from 'react';
 
 const ArticleCard = ({article, view}: IArticleCardProps) => {
-    const {videoUrl, title, content, imageUrl, datePublished, author} = article;
+    const {description, videoUrl, title, content, imageUrl, datePublished, author} = article;
     const [isPlaying, setIsPlaying] = useState(true);
     const videoRef: React.Ref<HTMLVideoElement> = useRef(null);
 
@@ -35,7 +35,7 @@ const ArticleCard = ({article, view}: IArticleCardProps) => {
             <div
                 className={classNames(styles.articleContent)}
             >
-                <Markdown>{content}</Markdown>
+                <Markdown>{view === "full" ? content : description}</Markdown>
             </div>
             <div className={styles.cardDetails}>
                 {<p className={styles.author}>{author}</p>}

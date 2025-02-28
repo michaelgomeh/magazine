@@ -1,8 +1,17 @@
 import {IArticle} from './types/types';
 
+export const categories: string[] = [
+    'Digital Detox',
+    'Healthy Living',
+    'Mindfulness',
+    'Mental Wellness',
+    'Body And Mind',
+]
+
 export const articles: IArticle[] = [
     {
         id: '1',
+        description: "In today's fast-paced, technology-driven world, constant connectivity can lead to stress, anxiety, and burnout. A digital detox allows you to step away from screens, reclaim your time, and focus on meaningful real-world connections. By reducing screen time, you can improve sleep quality, enhance mental clarity, and foster a greater sense of well-being.",
         category: 'Digital Detox',
         title: 'The Power of Unplugging: How a Digital Detox Can Improve Your Life',
         "content": "In today’s hyper-connected world, taking a break from screens isn’t just a luxury—it’s a necessity. With endless notifications, social media scrolling, and digital distractions, our brains are constantly bombarded with information, leaving little room for creativity, deep thinking, and genuine human connection. We live in an era where digital dependency has become second nature, making it increasingly difficult to detach from our devices.\n\n" +
@@ -65,7 +74,7 @@ export const articles: IArticle[] = [
         id: '2',
         category: 'Healthy Living',
         title: '10 Morning Habits for a Healthier and Happier You',
-
+        description: "The way you start your morning sets the tone for the rest of your day. Incorporating simple yet powerful habits like hydration, mindfulness, movement, and gratitude can lead to increased energy, improved focus, and a more positive mindset. Discover practical and easy-to-follow strategies to create a morning routine that promotes overall well-being.",
         content: "Your morning routine can set the tone for the entire day. The way you start your morning directly impacts your mood, energy levels, and productivity. Developing a mindful and intentional morning routine can significantly enhance your overall well-being, setting a positive foundation for the rest of the day.\n\n" +
 
             "**1. Hydrate First Thing in the Morning**\n\n" +
@@ -115,6 +124,8 @@ export const articles: IArticle[] = [
         id: '3',
         category: 'Mindfulness',
         title: 'Mindful Eating: A Simple Guide to Better Nutrition',
+        "description": "Mindful eating is about paying full attention to the experience of eating, from the flavors and textures to the body's hunger and fullness cues. By slowing down and savoring each bite, you can improve digestion, develop a healthier relationship with food, and make more nutritious choices. This guide provides practical tips to help you eat more consciously and enjoy food without guilt."
+        ,
         content:
             "In our fast-paced world, eating has become a rushed and mindless activity. We often eat while distracted—scrolling through social media, watching TV, or working on tasks. As a result, we lose connection with our food, often consuming more than we need or eating without truly enjoying our meals. However, **mindful eating** is a powerful practice that encourages being fully present during meals, paying attention to hunger and fullness cues, and truly savoring each bite. By slowing down and becoming more aware of what and how we eat, we can improve digestion, enhance satisfaction, and develop a healthier relationship with food.\n\n" +
 
@@ -173,7 +184,8 @@ export const articles: IArticle[] = [
         id: '4',
         category: 'Mental Wellness',
         title: 'The Science Behind Meditation and Its Impact on the Brain',
-        content:
+        "description": "Meditation is more than just a relaxation technique—it has profound effects on brain function and mental well-being. Research shows that regular meditation can reduce stress, enhance focus, and even change the structure of the brain over time. Learn about the neuroscience behind meditation and how you can incorporate it into your daily life for long-term cognitive and emotional benefits."
+        , content:
             "Meditation is often associated with spiritual practices, but science has proven that it offers significant **mental and physical benefits** as well. Neuroscientific research shows that regular meditation can physically change the brain, improving emotional regulation, focus, and overall mental well-being. In today's fast-paced world, where stress and distractions are constant, meditation provides a powerful tool to regain control over our thoughts, emotions, and overall mental clarity.\n\n" +
 
             "**The Science Behind Meditation**\n\n" +
@@ -230,7 +242,9 @@ export const articles: IArticle[] = [
 
     }, {
         id: '5',
-        category: 'Exercise',
+        category: 'Body & Mind',
+        "description": "Exercise is not just for physical fitness—it plays a crucial role in mental health as well. Regular movement helps reduce stress, anxiety, and depression while boosting mood, self-esteem, and cognitive function. Whether it's yoga, running, or strength training, incorporating physical activity into your routine can significantly improve your overall well-being."
+        ,
         title: 'Move Your Body: How Regular Exercise Can Boost Mental Health',
         content:
             "Exercise is often thought of as a physical activity, but its **mental health benefits** are just as significant. Regular movement can reduce symptoms of **anxiety**, **depression**, and **stress** while enhancing **mood** and overall **cognitive function**. Studies show that even a 20-minute walk can boost **endorphins**, the body's natural **mood lifters**, and improve **mental clarity**. Incorporating activities like **yoga**, **swimming**, or **cycling** into your routine can be particularly effective at calming the mind and building resilience against life's daily stresses. These activities engage both the body and the mind, fostering a deeper connection with oneself and contributing to a sense of **well-being**. In addition to improving mood, regular exercise can help regulate **sleep patterns**, which in turn supports mental health. **Sleep** plays a crucial role in **emotional regulation**, and exercise helps promote better rest, which is essential for **cognitive function**, **memory**, and overall mental health. If you’re new to exercising, start small. Try committing to a 15-minute workout each day, whether it’s a brisk walk, stretching routine, or quick bodyweight exercises. Gradually increase the intensity and duration as you build **stamina** and **confidence**. It's important to remember that any form of movement is beneficial, so don't feel pressured to start with intense or lengthy sessions. Over time, you’ll notice the positive impact on both your **physical** and **mental wellbeing**. Exercise can become a powerful tool for managing **stress**, preventing **burnout**, and boosting **self-esteem**. Additionally, the sense of **accomplishment** after completing a workout, no matter how small, contributes to a sense of **achievement** and **empowerment**. Exercise isn’t just about **physical fitness**—it’s a powerful tool for enhancing your overall **emotional** and **mental health**. It provides an opportunity to connect with your body, relieve stress, and cultivate a **positive mindset**. With consistent effort, the mental health benefits of exercise can be just as rewarding as the physical ones, helping you to feel more **energized**, **resilient**, and capable of navigating life's challenges.",

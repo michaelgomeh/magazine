@@ -13,6 +13,7 @@ const HomePage = () => {
         <div className={styles.homepage}>
             <div className={styles.homeLayout}>
                 <div className={classNames(styles.secondaryArticles, styles.onlyDesktop)}>
+                    <div className={styles.featured}>Staff Picks</div>
                     {secondaryArticles
                         .slice(0, 3)
                         .reverse()
@@ -32,6 +33,7 @@ const HomePage = () => {
                     view="compact"
                 />
                 <div className={styles.secondaryArticles}>
+                    <div className={styles.featured}>Featured</div>
                     {secondaryArticles.map((article) => (
                         <ArticleLink key={article.id} article={article} view="text"/>
                     ))}

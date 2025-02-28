@@ -1,20 +1,22 @@
 :root {
-	--primary: #654760 ;
+    --primary: 101, 71, 96;
+    --card-radius: 4px;
+    --page-height: calc(100vh - 120px);
 }
 
 /* Box sizing rules */
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /* Prevent font size inflation */
 html {
-	-moz-text-size-adjust: none;
-	-webkit-text-size-adjust: none;
-	text-size-adjust: none;
-	-webkit-font-smoothing: antialiased;
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    -webkit-font-smoothing: antialiased;
 }
 
 /* Remove default margin in favour of better control in authored CSS */
@@ -28,21 +30,21 @@ figure,
 blockquote,
 dl,
 dd {
-	margin: 0;
+    margin: 0;
 }
 
 /* Set core body defaults */
 body {
-	min-height: 100vh;
-	line-height: 1.5;
-	margin: 0;
-	padding: 0;
+    min-height: 100vh;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
 
-	font-family: 'Newsreader', serif;
-	font-optical-sizing: auto;
-	font-weight: 400;
-	font-style: normal;
-	text-align: justify;
+    font-family: 'Newsreader', serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    text-align: justify;
 }
 
 /* Set shorter line heights on headings and interactive elements */
@@ -53,7 +55,7 @@ h4,
 button,
 input,
 label {
-	line-height: 1.1;
+    line-height: 1.1;
 }
 
 /* Balance text wrapping on headings */
@@ -61,14 +63,14 @@ h1,
 h2,
 h3,
 h4 {
-	text-wrap: balance;
+    text-wrap: balance;
 }
 
 /* Make images easier to work with */
 img,
 picture {
-	max-width: 100%;
-	display: block;
+    max-width: 100%;
+    display: block;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -76,26 +78,26 @@ input,
 button,
 textarea,
 select {
-	font-family: inherit;
-	font-size: inherit;
+    font-family: inherit;
+    font-size: inherit;
 }
 
 /* Make sure textareas without a rows attribute are not tiny */
 textarea:not([rows]) {
-	min-height: 10em;
+    min-height: 10em;
 }
 
 /* Anything that has been anchored to should have extra scroll margin */
 :target {
-	scroll-margin-block: 5ex;
+    scroll-margin-block: 5ex;
 }
 
 p {
-	font-size: 1rem;
+    font-size: 1rem;
 }
 
 a,
 a:visited {
-	color: black;
-	text-decoration: none;
+    color: black;
+    text-decoration: none;
 }
