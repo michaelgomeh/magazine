@@ -19,6 +19,8 @@
 
 .mediaContainer {
     position: relative;
+    grid-area: media;
+
 }
 
 
@@ -93,7 +95,7 @@
 }
 
 .articleMedia {
-    grid-area: media;
+    /*grid-area: media;*/
     object-position: center 20%;
     width: 100%;
     aspect-ratio: 1;
