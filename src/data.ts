@@ -10,10 +10,10 @@ export const categories: string[] = [
 
 export const articles: IArticle[] = [
     {
-        id: '1',
+        id: 'v4vvz43v3a',
         description: "In today's fast-paced, technology-driven world, constant connectivity can lead to stress, anxiety, and burnout. A digital detox allows you to step away from screens, reclaim your time, and focus on meaningful real-world connections. By reducing screen time, you can improve sleep quality, enhance mental clarity, and foster a greater sense of well-being.",
         category: 'Digital Detox',
-        title: 'The Power of Unplugging: How a Digital Detox Can Improve Your Life',
+        title: 'How a Digital Detox Can Improve Your Life',
         "content": "In today’s hyper-connected world, taking a break from screens isn’t just a luxury—it’s a necessity. With endless notifications, social media scrolling, and digital distractions, our brains are constantly bombarded with information, leaving little room for creativity, deep thinking, and genuine human connection. We live in an era where digital dependency has become second nature, making it increasingly difficult to detach from our devices.\n\n" +
             "Many people find themselves reaching for their phones the moment they wake up, scrolling through feeds before even getting out of bed. We consume content at an overwhelming rate, from emails and news updates to streaming services and social media posts, rarely allowing our minds to rest. This non-stop engagement with digital devices contributes to mental fatigue, decreased productivity, and even sleep disturbances.\n\n" +
 
@@ -71,7 +71,7 @@ export const articles: IArticle[] = [
 
     },
     {
-        id: '2',
+        id: 'fjr89fj98',
         category: 'Healthy Living',
         title: '10 Morning Habits for a Healthier and Happier You',
         description: "The way you start your morning sets the tone for the rest of your day. Incorporating simple yet powerful habits like hydration, mindfulness, movement, and gratitude can lead to increased energy, improved focus, and a more positive mindset. Discover practical and easy-to-follow strategies to create a morning routine that promotes overall well-being.",
@@ -121,7 +121,7 @@ export const articles: IArticle[] = [
 
     },
     {
-        id: '3',
+        id: 'fj489fj48o',
         category: 'Mindfulness',
         title: 'Mindful Eating: A Simple Guide to Better Nutrition',
         "description": "Mindful eating is about paying full attention to the experience of eating, from the flavors and textures to the body's hunger and fullness cues. By slowing down and savoring each bite, you can improve digestion, develop a healthier relationship with food, and make more nutritious choices. This guide provides practical tips to help you eat more consciously and enjoy food without guilt."
@@ -181,7 +181,7 @@ export const articles: IArticle[] = [
 
     },
     {
-        id: '4',
+        id: 'fj389fj389',
         category: 'Mental Wellness',
         title: 'The Science Behind Meditation and Its Impact on the Brain',
         "description": "Meditation is more than just a relaxation technique—it has profound effects on brain function and mental well-being. Research shows that regular meditation can reduce stress, enhance focus, and even change the structure of the brain over time. Learn about the neuroscience behind meditation and how you can incorporate it into your daily life for long-term cognitive and emotional benefits."
@@ -241,7 +241,7 @@ export const articles: IArticle[] = [
         comments: 4
 
     }, {
-        id: '5',
+        id: 'fu8a3jf83-afj8e',
         category: 'Body & Mind',
         "description": "Exercise is not just for physical fitness—it plays a crucial role in mental health as well. Regular movement helps reduce stress, anxiety, and depression while boosting mood, self-esteem, and cognitive function. Whether it's yoga, running, or strength training, incorporating physical activity into your routine can significantly improve your overall well-being."
         ,

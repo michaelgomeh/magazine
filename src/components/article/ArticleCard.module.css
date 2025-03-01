@@ -1,7 +1,7 @@
 .articleCard {
     display: grid;
     grid-template-areas:
-		'image'
+		'media'
 		'title'
 		'details'
 		'content'
@@ -12,43 +12,88 @@
     transition: all 0.3s ease-in;
 }
 
-
 .articleCard:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: white;
 }
 
-@media (min-width: 768px) {
+.mediaContainer {
+    position: relative;
+}
 
+
+.premium .mediaContainer > *:not(.crown) /*, .premium .articleContent *:not(.crown)*/
+{
+    filter: blur(3px) grayscale(100%);
+}
+
+.premium .articleContent::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 60%);
+    pointer-events: none;
+}
+
+.crown {
+    color: black;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 1000;
+    background-size: 100% 100%;
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;;
+    align-items: center;
+    padding: .5rem 1rem;
+    border-radius: var(--card-radius);
+    text-transform: uppercase;
+    transition: all 200ms ease-in;
+    border: 1px dashed black;
+}
+
+.crown:hover {
+    background-size: 200% 200%;
+
+}
+
+.articleCard:hover .crown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
     .articleCard.horizontal {
+        display: grid;
         grid-template-areas:
-            'image title'
-            'image details'
-            'image content'
-            'image footer';
-        grid-template-columns: 2fr 2fr;
+            'media title'
+            'media details'
+            'media content'
+            'media footer';
+        grid-template-columns: 1fr 1fr;
     }
 
-    .articleMedia {
-        grid-area: image;
+    /*.articleMedia {*/
+    /*    grid-area: media;*/
+    /*}*/
+    .articleCard.horizontal .articleMedia {
         border-top-left-radius: var(--card-radius);
         border-bottom-left-radius: var(--card-radius);
     }
 
-    .grayscale {
+    .articleCard:not(.full):not(:hover):not(.premium) .articleMedia {
         filter: grayscale(50%);
     }
 }
 
-@media (max-width: 767px) {
-    .articleMedia {
-        border-top-left-radius: var(--card-radius);
-        border-top-right-radius: var(--card-radius);
-    }
-}
-
 .articleMedia {
-    grid-area: image;
+    grid-area: media;
     object-position: center 20%;
     width: 100%;
     aspect-ratio: 1;
@@ -60,11 +105,21 @@
     overflow: hidden;
 }
 
-.articleMedia:hover {
+.articleCard:not(.horizontal) .articleMedia {
+    border-top-left-radius: var(--card-radius);
+    border-top-right-radius: var(--card-radius);
+}
+
+.articleCard:hover:not(.premium) .articleMedia {
     filter: grayscale(0%);
 }
 
-.articleMedia.noImage {
+.articleCard:hover {
+    border: 1px solid rgba(var(--primary), 1);
+
+}
+
+.articleCard.text .articleMedia {
     display: none;
 }
 
@@ -84,6 +139,7 @@
 .articleContent {
     grid-area: content;
     padding: 0 1rem 1rem;
+    position: relative;
 }
 
 .articleCard.full > .articleContent > p:first-child::first-letter {
@@ -129,13 +185,13 @@
 
 }
 
-.articleCard.text > .articleContent {
-    overflow: hidden;
-}
+/*.articleCard.text > .articleContent {*/
+/*    overflow: hidden;*/
+/*}*/
 
 .articleCard.text > .articleContent > p {
     overflow: hidden;
-
+    text-overflow: ellipsis;
 }
 
 .articleCard > .articleContent {
@@ -155,7 +211,7 @@
 }
 
 .author {
-    grid-area: author;
+    /*grid-area: author;*/
     color: #5f5f5f;
     padding-inline: 1rem;
 }

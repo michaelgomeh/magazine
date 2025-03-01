@@ -3,12 +3,12 @@ import styles from './ArticleCard.module.css';
 import classNames from 'classnames';
 import Markdown from 'react-markdown';
 import {IArticleCardProps} from '../../types/types';
-import {useRef, useState} from 'react';
+import {Ref, useRef, useState} from 'react';
 
 const ArticleCard = ({article, view}: IArticleCardProps) => {
     const {description, videoUrl, title, content, imageUrl, datePublished, author} = article;
     const [isPlaying, setIsPlaying] = useState(true);
-    const videoRef: React.Ref<HTMLVideoElement> = useRef(null);
+    const videoRef: Ref<HTMLVideoElement> = useRef(null);
 
     const togglePlay = () => {
         if (videoRef.current) {
@@ -19,11 +19,14 @@ const ArticleCard = ({article, view}: IArticleCardProps) => {
             }
             setIsPlaying(!isPlaying);
         }
+
     };
+
+    const isPremium = article.id === "fjr89fj98";
 
     return (
         <div className={classNames(styles.articleCard, styles[view], {
-            [styles.horizontal]: view == 'horizontal',
+            [styles.premium]: isPremium
         })}>
             <h2
                 className={classNames(styles.articleTitle, {
@@ -36,7 +39,14 @@ const ArticleCard = ({article, view}: IArticleCardProps) => {
                 className={classNames(styles.articleContent)}
             >
                 <Markdown>{view === "full" ? content : description}</Markdown>
-            </div>
+                {isPremium &&
+                    <button className={styles.crown}>Premium <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                  height="24"
+                                                                  className="icon icon-tabler icons-tabler-outline icon-tabler-crown">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M12 6l4 6l5 -4l-2 10h-14l-2 -10l5 4z"/>
+                    </svg></button>
+                }</div>
             <div className={styles.cardDetails}>
                 {<p className={styles.author}>{author}</p>}
                 {
@@ -45,28 +55,30 @@ const ArticleCard = ({article, view}: IArticleCardProps) => {
                     </p>
                 }
             </div>
-            {imageUrl && (
-                <img
+
+            <div className={styles.mediaContainer}>
+                {imageUrl && (
+
+                    <img
+                        className={classNames(styles.articleMedia, {
+                            [styles.grayscale]: view !== 'full',
+                        })}
+                        src={imageUrl}
+                        alt={title}
+                    />
+                )}
+                {videoUrl && <video
                     className={classNames(styles.articleMedia, {
-                        [styles.noImage]: view === 'text',
                         [styles.grayscale]: view !== 'full',
                     })}
-                    src={imageUrl}
-                    alt={title}
-                />
-            )}
-            {videoUrl && <video
-                className={classNames(styles.articleMedia, {
-                    [styles.noImage]: view === 'text',
-                    [styles.grayscale]: view !== 'full',
-                })}
-                ref={videoRef}
-                onClick={togglePlay}
-                autoPlay={true}
-                src={videoUrl}
-                muted
-                loop
-            />}
+                    ref={videoRef}
+                    onClick={togglePlay}
+                    autoPlay={true}
+                    src={videoUrl}
+                    muted
+                    loop
+                />}
+            </div>
             {/* {tags && tags.length > 0 && (
 				<ul>
 					{tags.map((tag, index) => (

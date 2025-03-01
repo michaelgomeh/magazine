@@ -1,10 +1,18 @@
-.articlesList{
+.articlesList {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-.articlesList  * {
-    max-height: 300px;
+.articlesList .articleCard {
+    height: calc(var(--page-height) - 60px);
+}
+
+@media (min-width: 768px) {
+    .articlesList {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
 }
 
