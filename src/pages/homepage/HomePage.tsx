@@ -9,7 +9,7 @@ import ZenSentence from '../../components/ZenSentence.tsx';
 const HomePage = () => {
 	const mainArticle = articles[0];
 	const secondaryArticles = articles.slice(0, 3);
-	const videoArticle = articles[4];
+	const videoArticle = articles[6];
 	return (
 		<div className={styles.homepage}>
 			<div className={styles.homeLayout}>

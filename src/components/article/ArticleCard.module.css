@@ -84,7 +84,7 @@
 			'media title'
 			'media details'
 			'media content'
-			'media footer';
+			/* 'media footer' */;
 		grid-template-columns: 1fr 1fr;
 	}
 
