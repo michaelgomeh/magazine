@@ -186,13 +186,6 @@
 	height: 100%;
 }
 
-.articleCard.text {
-}
-
-/*.articleCard.text > .articleContent {*/
-/*    overflow: hidden;*/
-/*}*/
-
 .articleCard.text > .articleContent > p {
 	overflow: hidden;
 	text-overflow: ellipsis;
