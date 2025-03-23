@@ -16,7 +16,7 @@ const AboutPage: React.FC = () => {
 			<ul>
 				<li className={styles.link}>
 					<a
-						href="https://github.com/your-github-username"
+						href="https://github.com/michaelgomeh/"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
@@ -25,7 +25,7 @@ const AboutPage: React.FC = () => {
 				</li>
 				<li className={styles.link}>
 					<a
-						href="https://linkedin.com/in/your-linkedin-username"
+						href="https://www.linkedin.com/in/michael-gomeh/"
 						target="_blank"
 						rel="noopener noreferrer"
 					>
