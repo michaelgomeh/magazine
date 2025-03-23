@@ -1,24 +1,24 @@
 .homepage {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-bottom: 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	margin-bottom: 1rem;
 }
 
 .homeLayout {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1rem;
 }
 
 .articles {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
 }
 
 .secondaryArticles > * {
-    overflow: hidden;
+	overflow: hidden;
 }
 
 /*.featured {*/
@@ -36,53 +36,64 @@
 /*}*/
 
 .articleCard {
-    max-height: calc(var(--page-height) - 60px);;
+	max-height: var(--page-height);
 }
 
 .secondaryArticles {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    max-height: calc(var(--page-height) - 60px);
-    justify-content: stretch;
-    gap: 1rem;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	max-height: var(--page-height);
+	justify-content: stretch;
+	gap: 1rem;
 }
 
 @media (max-width: 767px) {
-    .onlyDesktop {
-        display: none;
-    }
-
-    .videoContainer {
-        flex-direction: column;
-    }
+	.homeLayout {
+		grid-template-columns: 1fr;
+	}
+	.videoContainer {
+		flex-direction: column;
+	}
 }
 
 @media (min-width: 768px) {
-    .homeLayout {
-        grid-template-columns: 1fr 2fr 1fr;
-    }
+	.homeLayout {
+		grid-template-columns: 1fr 1fr;
+	}
 
-    .articles {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-    }
+	.articles {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
 
-    .videoContainer {
-        flex-direction: row;
-    }
+	.videoContainer {
+		flex-direction: row;
+	}
+}
+
+.onlyDesktop {
+	display: none;
+}
+
+@media (min-width: 1024px) {
+	.homeLayout {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	.onlyDesktop {
+		display: flex;
+	}
 }
 
 .videoContainer {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
 }
 
 .videoDescription {
-    text-align: justify;
-    gap: 1rem;
-    display: flex;
-    flex-direction: column;
-
+	text-align: justify;
+	gap: 1rem;
+	display: flex;
+	flex-direction: column;
 }
